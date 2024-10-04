@@ -79,7 +79,7 @@ function Reservation({
       reservations: [],
       fixedUser: {
         id: 14,
-        name: '박지연',
+        name: '기획 고정석',
         team: teamPo,
         email: '',
         photo: '',
@@ -167,6 +167,8 @@ function Reservation({
 
   return (
     <Styled.Container>
+      <div className="meeting-room">회의실 방향</div>
+
       <Styled.SeatContainer>
         <Styled.SeatList>
           {[...Array(5)]
@@ -186,6 +188,8 @@ function Reservation({
             .map((deskNo, i) => renderDesk(deskNo, i))}
         </Styled.SeatList>
       </Styled.SeatContainer>
+
+      <div className="wall">벽 방향</div>
     </Styled.Container>
   );
 }
